@@ -7,14 +7,14 @@ it('should return stored logs', () => {
 
 it('should save log message', () => {
   const logger = createLogger('user login');
-  logger.log('login succes')
-  expect(logger.getLogs()).toEqual(['log - user login -login success']);
+  logger.log('login success')
+  expect(logger.getLogs()).toEqual(['log - user login - login success']);
 });
 
 it('should save errors', () => {
   const logger = createLogger('user login');
   logger.error('login failed')
-  expect(logger.getLogs()).toEqual(['error - user login -login failed']);
+  expect(logger.getLogs()).toEqual(['error - user login - login failed']);
 });
 
 
